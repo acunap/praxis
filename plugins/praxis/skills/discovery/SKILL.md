@@ -128,6 +128,19 @@ type: discovery
 **Resolution**: {decision taken — added when resolved}
 -->
 
+## Complexity Challenges
+<!-- Use this format for each challenge:
+### CD-{N}: {Dimension name} — {one-line challenge}
+**Status**: Open | Resolved
+**Dimension**: #{number} — {dimension name}
+**Challenge**: {What assumption is being questioned? What seems over-engineered?}
+**Context**: {Why this matters for this specific proposal}
+**Options**:
+1. {simpler alternative} — {tradeoff}
+2. {proposed approach} — {tradeoff}
+**Resolution**: {How it was resolved — which option was chosen and why}
+-->
+
 ## Issues
 ```
 

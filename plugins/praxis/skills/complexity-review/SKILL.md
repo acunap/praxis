@@ -61,20 +61,6 @@ List all the complexity dimensions the proposal addresses (scale, consistency, r
 ### Step 2: Challenge Each One
 Review all 30 dimensions against the proposal. Most will pass without issue — only document the ones that **raise a real concern or challenge** the proposal.
 
-For each dimension that raises a concern, document a **Complexity Challenge (CD)** in the plan document:
-
-```
-### CD-{N}: {Dimension name} — {one-line challenge}
-- **Status**: Open / Resolved
-- **Dimension**: #{number} — {dimension name}
-- **Challenge**: {What assumption is being questioned? What seems over-engineered?}
-- **Context**: {Why this matters for this specific proposal}
-- **Options** (if applicable):
-  - A) {simpler alternative}
-  - B) {proposed approach}
-- **Resolution**: {How it was resolved — which option was chosen and why}
-```
-
 For each challenge, ask:
 - **Is this assumption based on actual requirements or speculation?**
 - **What's the simplest alternative that could work today?**
@@ -92,8 +78,6 @@ Generate 2-3 progressively simpler versions of the proposal:
 
 Explain WHY the simpler version is better — not just "it's simpler". Include concrete criteria for when to add complexity later (e.g., "only if load > 10K/sec").
 
-Document the versions in the plan as part of the complexity review output.
-
 ### Step 4: Highlight What Can Be Postponed
 List features/complexity that can be added later:
 - "We can add retries later if we see failures"
@@ -102,15 +86,6 @@ List features/complexity that can be added later:
 
 ### Step 5: Analyze Basal Cost
 For each component/feature in the proposal, estimate the **ongoing cost** it imposes on the team.
-
-### Step 6: Write to Plan
-The complexity review output MUST be written to the plan document — not just presented verbally. This includes:
-- Only the CDs (Complexity Challenges) that raised real concerns, with their resolutions
-- The progressive versions (simplest → proposed)
-- The postponement list
-- The final recommendation
-
-This ensures reviewers can see the reasoning and the review is not lost after the conversation ends.
 
 ## Basal Cost of Software
 
