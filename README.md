@@ -37,7 +37,7 @@ A smart process rule is included — it evaluates task complexity and only sugge
 
 If you're working on praxis itself, skills are available directly as `/discovery`, `/implementation`, etc. — no plugin install needed.
 
-The `CLAUDE.md` at the root handles the local workflow. The `rules/process.md` file is only loaded for plugin consumers.
+The `CLAUDE.md` at the root handles the local workflow. The `hooks/session-guide.sh` hook is only loaded for plugin consumers.
 
 ## Skills included
 
@@ -48,7 +48,7 @@ The `CLAUDE.md` at the root handles the local workflow. The `rules/process.md` f
 | `tdd` | Test-driven development process |
 | `collaborative-design` | Visual scenario exploration |
 | `event-modeling` | Map behavior as events, commands, views |
-| `hexagonal-architecture` | Ports and adapters design |
+| `backend-architecture` | Ports and adapters design |
 | `frontend-architecture` | Feature-based React architecture |
 | `complexity-review` | Challenge and simplify proposals |
 | `bdd-with-approvals` | BDD tests in domain language |

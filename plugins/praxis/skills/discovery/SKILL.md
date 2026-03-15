@@ -36,7 +36,7 @@ idle → clarify → clarify_review → model → model_review → architecture 
 | clarify_review        | praxis:complexity-review     | Challenge and simplify what was clarified            |
 | model                 | praxis:event-modeling        | Map behavior as events, commands, views, and slices  |
 | model_review          | praxis:complexity-review     | Challenge and simplify the model                     |
-| architecture          | praxis:backend-architecture| Define domain boundaries, ports, and adapters        |
+| architecture          | praxis:backend-architecture / praxis:frontend-architecture | Define domain boundaries, ports, and adapters        |
 | architecture_review   | praxis:complexity-review     | Challenge and simplify the architecture              |
 | slice                 | praxis:collaborative-design  | Break work into vertical slices with dependencies    |
 
