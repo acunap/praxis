@@ -29,7 +29,7 @@ A smart process rule is included — it evaluates task complexity and only sugge
 
 1. Install the plugin in any project.
 2. Start working — the process rule will suggest `/praxis:discovery` when the task is complex enough.
-3. Discovery designs the solution step by step: clarify, model, architect, and slice into issues in `plan.md`.
+3. Discovery designs the solution step by step: clarify, model, architect, and slice into issues under `docs/specs/<timestamp_slug>/` (a `SPEC.md`, a `metadata.json`, and one file per issue).
 4. Use `/praxis:implementation` to build each issue with TDD, simplification, and complexity review.
 5. Each issue ends with a commit. When all issues are done, create a PR.
 
@@ -44,7 +44,7 @@ The `CLAUDE.md` at the root handles the local workflow. The `hooks/session-guide
 | Skill | Purpose |
 |-------|---------|
 | `discovery` | Design before code — clarify, model, architect, slice |
-| `implementation` | TDD workflow driven by plan.md issues |
+| `implementation` | TDD workflow driven by the spec's issues |
 | `tdd` | Test-driven development process |
 | `collaborative-design` | Visual scenario exploration |
 | `event-modeling` | Map behavior as events, commands, views |
