@@ -1,33 +1,20 @@
 {
   "name": "praxis",
-  "version": "1.1.0",
-  "description": "Structured practice for software craft — discovery, implementation, and engineering skills for Claude Code",
+  "version": "2.0.0",
+  "description": "Structured practice for software craft — an end-to-end design-then-build workflow and engineering skills for Claude Code",
   "author": { "name": "Antonio Acuna" },
   "license": "MIT",
-  "hooks": {
-    "SessionStart": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/session-guide.sh"
-          }
-        ]
-      }
-    ]
-  },
   "skills": [
     "./skills/bdd-with-approvals",
     "./skills/code-simplifier",
     "./skills/collaborative-design",
     "./skills/complexity-review",
-    "./skills/discovery",
     "./skills/dockerfile-review",
     "./skills/event-modeling",
     "./skills/expand-contract",
     "./skills/frontend-architecture",
     "./skills/backend-architecture",
-    "./skills/implementation",
+    "./skills/praxis",
     "./skills/tdd",
     "./skills/test-desiderata",
     "./skills/thinkies"
