@@ -1,21 +1,17 @@
 ---
 name: implementation
 description: Implement code with TDD following a deterministic state machine (understand → scout → architecture → tdd → simplify → test_quality → complexity → spec → commit). Driven by issues in plan.md.
-argument-hint: "[tech]"
 ---
 
 # Implementation
 
 Implement code with TDD. This skill runs a deterministic state machine driven by issues in `plan.md`.
 
-## Audience Mode
+## Communication
 
-If `$ARGUMENTS` is `tech`, use tech tone. Otherwise, default to non-tech.
+Explain progress and decisions to the user using business language. Describe what was built and why, not how. Avoid code snippets in summaries unless asked.
 
-- **Default (no argument)**: Explain progress and decisions using business language. Describe what was built and why, not how. Avoid code snippets in summaries unless asked.
-- **`tech`**: Use tech language — code references, architecture terms, test results, etc.
-
-**The code, tests, commits, and plan updates are identical regardless of mode.** Only the conversational explanations presented to the user change.
+**The code, tests, commits, and plan updates always use precise technical language.** Only the conversational explanations presented to the user use business language.
 
 ## Language
 

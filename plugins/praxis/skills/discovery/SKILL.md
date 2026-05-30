@@ -1,21 +1,17 @@
 ---
 name: discovery
 description: Design before code. Runs the Discovery state machine (clarify → model → architecture → slice) to produce issues in plan.md. Use when designing a new project, feature, or system.
-argument-hint: "[tech]"
 ---
 
 # Discovery
 
 Design before code. This skill runs a deterministic state machine that produces well-defined issues in `plan.md`.
 
-## Audience Mode
+## Communication
 
-If `$ARGUMENTS` is `tech`, use tech tone. Otherwise, default to non-tech.
+Explain concepts to the user using business language — workflows, rules, responsibilities, integrations. Avoid jargon. Use analogies when helpful.
 
-- **Default (no argument)**: Explain concepts using business language — workflows, rules, responsibilities, integrations. Avoid jargon. Use analogies when helpful.
-- **`tech`**: Use tech language — domain modeling terms, architecture concepts, system boundaries, ports/adapters, aggregates, etc.
-
-**The plan document and its content must be identical regardless of mode.** Only the conversational explanations and summaries presented to the user change. The plan is a technical artifact — it always uses precise technical language.
+**The plan document is a technical artifact and always uses precise technical language.** Only the conversational explanations and summaries presented to the user use business language.
 
 ## Language
 
