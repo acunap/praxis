@@ -5,7 +5,6 @@
   "author": { "name": "Antonio Acuna" },
   "license": "MIT",
   "skills": [
-    "./skills/bdd-with-approvals",
     "./skills/code-simplifier",
     "./skills/collaborative-design",
     "./skills/complexity-review",

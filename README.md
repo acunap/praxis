@@ -6,9 +6,9 @@ Structured practice for software craft — a Claude Code plugin with discovery, 
 
 Working with AI coding assistants can feel chaotic — you start coding without a clear plan, skip design steps, and end up with inconsistent results. Praxis is a [Claude Code](https://docs.anthropic.com/en/docs/claude-code) plugin that brings structure through a single end-to-end workflow, `/praxis:praxis`, with two phases:
 
-1. **Discovery** — Design before code. Clarify the problem, model the domain, define the architecture, and break work into vertical slices. Each step is reviewed for unnecessary complexity before moving on.
+1. **Discovery** — Design before code. Clarify the problem, model the domain, and define the architecture. The whole design is then reviewed for unnecessary complexity in a single pass before breaking work into vertical slices.
 
-2. **Implementation** — Code with TDD. For each slice: understand the requirement, define the architecture, implement with test-driven development, simplify, review test quality, challenge complexity, write acceptance specs, and commit.
+2. **Implementation** — Code with TDD. For each slice: understand the requirement, define the architecture, implement with test-driven development, simplify, review test quality, challenge complexity, and commit.
 
 It is one skill, not two: the **current step is always derived from `metadata.json`**, so running `/praxis:praxis` resumes exactly where the workflow left off — first designing, then building. The whole thing follows a strict state machine — no skipping steps, no moving forward without confirmation. Open questions must be resolved before progressing.
 
@@ -51,7 +51,6 @@ The `CLAUDE.md` at the root handles the local workflow.
 | `backend-architecture` | Ports and adapters design |
 | `frontend-architecture` | Feature-based React architecture |
 | `complexity-review` | Challenge and simplify proposals |
-| `bdd-with-approvals` | BDD tests in domain language |
 | `expand-contract` | Zero-downtime breaking changes |
 | `thinkies` | Kent Beck's pattern-based thinking |
 | `dockerfile-review` | Dockerfile optimization |

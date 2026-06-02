@@ -24,28 +24,28 @@ The workflow has two phases — **discovery** and **implementation** — that fo
 
 ```
 DISCOVERY (once per spec)
-  clarify → clarify_review → model → model_review → architecture → architecture_review → slice
-                                                                                          │
-                                                                          (issues created)│
-                                                                                          ▼
+  clarify → model → architecture → review → slice
+                                              │
+                              (issues created)│
+                                              ▼
 IMPLEMENTATION (per issue, repeated)
-  understand → scout → architecture → tdd → simplify → test_quality → complexity → spec → commit
-                                                                                          │
-                                                                       (all issues done)  ▼
-                                                                                        → PR
+  understand → scout → architecture → tdd → simplify → test_quality → complexity → commit
+                                                                                     │
+                                                                  (all issues done)  ▼
+                                                                                   → PR
 ```
+
+The single `review` step challenges and simplifies the **whole design** (clarify + model + architecture) at once, right before slicing — not after each individual step.
 
 ### Discovery steps
 
-| Step                  | Skill                                                      | What to do                                            |
-| --------------------- | ---------------------------------------------------------- | ----------------------------------------------------- |
-| clarify               | praxis:collaborative-design                                | Understand the problem space through visual scenarios |
-| clarify_review        | praxis:complexity-review                                   | Challenge and simplify what was clarified             |
-| model                 | praxis:event-modeling                                      | Map behavior as events, commands, views, and slices   |
-| model_review          | praxis:complexity-review                                   | Challenge and simplify the model                      |
-| architecture          | praxis:backend-architecture / praxis:frontend-architecture | Define domain boundaries, ports, and adapters         |
-| architecture_review   | praxis:complexity-review                                   | Challenge and simplify the architecture               |
-| slice                 | praxis:collaborative-design                                | Break work into vertical slices with dependencies     |
+| Step         | Skill                                                      | What to do                                            |
+| ------------ | ---------------------------------------------------------- | ----------------------------------------------------- |
+| clarify      | praxis:collaborative-design                                | Understand the problem space through visual scenarios |
+| model        | praxis:event-modeling                                      | Map behavior as events, commands, views, and slices   |
+| architecture | praxis:backend-architecture / praxis:frontend-architecture | Define domain boundaries, ports, and adapters         |
+| review       | praxis:complexity-review                                   | Challenge and simplify the whole design before slicing |
+| slice        | praxis:collaborative-design                                | Break work into vertical slices with dependencies     |
 
 ### Implementation steps (per issue)
 
@@ -58,7 +58,6 @@ IMPLEMENTATION (per issue, repeated)
 | simplify     | praxis:code-simplifier | Simplify the result                                                                |
 | test_quality | praxis:test-desiderata | Check test quality                                                                 |
 | complexity   | praxis:complexity-review | Challenge unnecessary complexity                                                 |
-| spec         | praxis:bdd-with-approvals | Write acceptance specs and verify they pass                                     |
 | commit       | (none)                 | Commit the issue's changes                                                          |
 
 **Architecture skill selection** (used in both `architecture` steps):
@@ -159,7 +158,6 @@ Follow the **State Transition Protocol** below for every step, regardless of pha
 - `simplify`: invoke `praxis:code-simplifier`.
 - `test_quality`: invoke `praxis:test-desiderata`.
 - `complexity`: invoke `praxis:complexity-review`.
-- `spec`: invoke `praxis:bdd-with-approvals` to write acceptance specs and verify they pass.
 - `commit`: commit the issue's changes. Set the issue's `status` to `done` in `metadata.json`.
 - **When all issues are done**: create the pull request.
 
@@ -186,11 +184,9 @@ State lives in `metadata.json`, not in frontmatter. Each phase is `null` until c
   "created": "<ISO 8601 timestamp>",
   "discovery": {
     "clarify": null,
-    "clarify_review": null,
     "model": null,
-    "model_review": null,
     "architecture": null,
-    "architecture_review": null,
+    "review": null,
     "slice": null
   },
   "issues": {}
@@ -214,7 +210,6 @@ After the `slice` step, `issues` is populated. As implementation progresses, eac
       "simplify": null,
       "test_quality": null,
       "complexity": null,
-      "spec": null,
       "commit": null
     }
   }
@@ -324,11 +319,9 @@ Create at `docs/specs/<timestamp_slug>/metadata.json`:
   "created": "{ISO 8601 timestamp}",
   "discovery": {
     "clarify": null,
-    "clarify_review": null,
     "model": null,
-    "model_review": null,
     "architecture": null,
-    "architecture_review": null,
+    "review": null,
     "slice": null
   },
   "issues": {}

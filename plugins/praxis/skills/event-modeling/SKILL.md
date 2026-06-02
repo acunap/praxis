@@ -32,7 +32,7 @@ See [references/slice-types.md](references/slice-types.md) for element rules, de
 1. **Understand the domain** — Identify aggregates (core business entities), actors, and high-level use cases. Ask about business processes, not technical implementation.
 2. **High-level model** — Draft all slices without field details. Show the flow between them — which events feed which read models, which screens lead to which commands. Format as markdown with one section per slice.
 3. **Slice detail** — Walk through one slice at a time. Define fields with types and example values. Identify business rules (real domain rules, not simple validations). Write specifications as Given/When/Then scenarios.
-4. **Executable specifications** — Turn specifications into approval fixture files using the `bdd-with-approvals` skill. The event model specs (Given events / When command / Then events) map naturally to the approved fixture pattern.
+4. **Executable specifications** — Turn specifications into test cases. The event model specs (Given events / When command / Then events) map naturally to the tests that drive implementation during TDD.
 
 **Existing codebases:** Read the code to extract domain concepts. Map operations to slice types (writes → STATE_CHANGE, reads → STATE_VIEW, background → AUTOMATION). Extract specs from unit tests and comments.
 

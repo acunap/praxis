@@ -86,7 +86,6 @@ src/
       __tests__/
         <entry-point>/
           index.spec.ts                             # integration test (handler → use case)
-          fixtures/                                 # .approved.txt approval snapshots
       domain/
         entity/
           subscription.ts                           # entity
