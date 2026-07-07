@@ -1,6 +1,6 @@
 ---
 name: implementation
-description: Implement code with TDD following a deterministic state machine (understand → scout → architecture → tdd → simplify → test_quality → complexity → spec → commit). Driven by issues in plan.md.
+description: Implement code with TDD following a deterministic state machine (understand → scout → architecture → tdd → simplify → test_quality → complexity → commit). Driven by issues in plan.md.
 argument-hint: "[tech]"
 ---
 
@@ -25,7 +25,7 @@ If `$ARGUMENTS` is `tech`, use tech tone. Otherwise, default to non-tech.
 ## State Machine
 
 ```
-idle → understand → scout → architecture → tdd → simplify → test_quality → complexity → spec → commit → idle
+idle → understand → scout → architecture → tdd → simplify → test_quality → complexity → commit → idle
 ```
 
 ## Steps
@@ -39,7 +39,6 @@ idle → understand → scout → architecture → tdd → simplify → test_qua
 | simplify     | praxis:code-simplifier       | Simplify the result                                                                |
 | test_quality | praxis:test-desiderata       | Check test quality                                                                 |
 | complexity   | praxis:complexity-review     | Challenge unnecessary complexity                                                   |
-| spec         | praxis:bdd-with-approvals    | Write acceptance specs and verify they pass                                        |
 | commit       | (none)                       | Commit the issue's changes                                                         |
 
 **Architecture skill selection**:
@@ -56,9 +55,8 @@ idle → understand → scout → architecture → tdd → simplify → test_qua
 6. **Simplify**: Use the Skill tool to invoke `skill: "praxis:code-simplifier"` to simplify the result.
 7. **Test quality**: Use the Skill tool to invoke `skill: "praxis:test-desiderata"` to check test quality.
 8. **Complexity**: Use the Skill tool to invoke `skill: "praxis:complexity-review"` to challenge unnecessary complexity.
-9. **Spec**: Use the Skill tool to invoke `skill: "praxis:bdd-with-approvals"` to write acceptance specs and verify they pass.
-10. **Commit**: Commit the issue's changes. Mark issue status as `done`.
-11. **When all issues are done**: Create the pull request.
+9. **Commit**: Commit the issue's changes. Mark issue status as `done`.
+10. **When all issues are done**: Create the pull request.
 
 ## State Transition Protocol
 
